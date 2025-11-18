@@ -12,11 +12,10 @@ Desenvolvimento de uma aplicação web para a gestão centralizada de alunos, cu
 - **Build Tool:** Apache Maven
 
 ## 👥 Componentes da Equipe
-- [Seu Nome Completo] - [Sua Matrícula]
-- [Nome do Colega (se houver)] - [Matrícula do Colega]
+Gustavo Cerqueira Bonfim Oliveira - 202303392877
 
 ## 🛠️ Como Executar o Projeto
-1. **Clonar o Repositório:** `git clone [link do seu repo]`
+1. **Clonar o Repositório:** `git clone https://github.com/smpguga/sga-projeto-poo-java-gustavoc`
 2. **Configurar o Banco:** Executar o script SQL `CREATE TABLE` no MySQL.
 3. **Ajustar as Propriedades:** No arquivo `src/main/resources/application.properties`, ajuste a senha do MySQL.
 4. **Rodar:** Iniciar a classe `DemoApplication.java` no IntelliJ.
