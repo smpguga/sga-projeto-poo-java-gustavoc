@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gestão de Disciplinas</title>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="~{fragments/nav :: main-menu}"></div>
+
+<div class="container mt-4">
+
+    <h1 class="mb-4">Disciplinas</h1>
+
+    <div class="card mb-4">
+        <div class="card-header">Nova Disciplina</div>
+        <div class="card-body">
+            <form action="/disciplinas/salvar" method="post">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label>Nome da Disciplina:</label>
+                        <input type="text" name="nome" class="form-control" required>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label>Carga Horária:</label>
+                        <input type="number" name="carga_horaria" class="form-control" required>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label>Curso Pertencente:</label>
+                        <select name="curso" class="form-select" required>
+                            <option value="">Selecione...</option>
+                            <option th:each="curso : ${cursos}"
+                                    th:value="${curso.id}"
+                                    th:text="${curso.nome}"></option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success">Salvar Disciplina</button>
+            </form>
+        </div>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>CH</th>
+            <th>Curso Vinculado</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="disc : ${disciplinas}">
+            <td th:text="${disc.id}"></td>
+            <td th:text="${disc.nome}"></td>
+            <td th:text="${disc.carga_horaria}"></td>
+            <td th:text="${disc.curso != null} ? ${disc.curso.nome} : '-'"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>
