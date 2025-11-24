@@ -42,6 +42,7 @@
             <th>Nome</th>
             <th>Carga Horária</th>
             <th>Descrição</th>
+            <th>Ações</th> </tr>
         </tr>
         </thead>
         <tbody>
@@ -50,6 +51,12 @@
             <td th:text="${curso.nome}"></td>
             <td th:text="${curso.carga_horaria}"></td>
             <td th:text="${curso.descricao}"></td>
+            <td>
+                <a th:href="@{/cursos/excluir/{id}(id=${curso.id})}"
+                   class="btn btn-danger btn-sm"
+                   onclick="return confirm('Tem certeza que deseja excluir o curso: ' + ${curso.nome} + '?');">
+                    Excluir
+                </a>
         </tr>
         </tbody>
     </table>
