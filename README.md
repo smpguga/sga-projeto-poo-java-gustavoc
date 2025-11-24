@@ -25,5 +25,21 @@ O sistema atende aos requisitos funcionais propostos, permitindo:
 ## 🛠️ Como Executar o Projeto
 
 1. **Clonar o Repositório:**
-   ```bash
-   git clone https://github.com/smpguga/sga-projeto-poo-java-gustavoc
+   `git clone https://github.com/smpguga/sga-projeto-poo-java-gustavoc`
+
+2. **Configurar o Banco de Dados:**
+   - Abra o MySQL Workbench (ou terminal).
+   - Crie um banco de dados vazio chamado sga_db rodando o comando:
+   `CREATE DATABASE sga_db;`
+   *(Nota: As tabelas serão criadas automaticamente pelo Hibernate ao iniciar a aplicação).*
+
+3. **Ajustar as Propriedades:**
+   - Abra o arquivo `src/main/resources/application.properties`.
+   - Edite a linha `spring.datasource.password` com a sua senha do MySQL local.
+
+4. **Rodar a Aplicação:**
+   - No IntelliJ, execute a classe `DemoApplication.java`.
+   - Ou via terminal: `mvn spring-boot:run`.
+
+5. **Acessar:**
+   - Abra o navegador em: http://localhost:8080/
