@@ -59,4 +59,4 @@ public class CursoController {
         return "redirect:/cursos";
     }
 
-} // <--- Esta deve ser a ÚNICA chave final.
+}

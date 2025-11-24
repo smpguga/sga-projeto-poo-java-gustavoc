@@ -15,8 +15,6 @@ public class Curso {
     private Integer carga_horaria;
     private String descricao;
 
-    // --- AQUI ESTAVA FALTANDO: O relacionamento com Alunos ---
-    // mappedBy = "curso" significa que quem manda na relação é o campo 'curso' lá na classe Aluno
     @OneToMany(mappedBy = "curso")
     private List<Aluno> alunos;
 
