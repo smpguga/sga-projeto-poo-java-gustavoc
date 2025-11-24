@@ -1,4 +1,5 @@
 SGA - Sistema de Gestão Acadêmica
+
 🎯 Objetivo do Projeto
 Desenvolvimento de uma aplicação web para a gestão centralizada de alunos, cursos, disciplinas e matrículas em uma instituição de ensino. O sistema visa substituir processos manuais, garantindo a integridade dos dados e a eficiência administrativa.
 
